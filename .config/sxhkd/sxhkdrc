@@ -1,0 +1,40 @@
+super + Return
+	urxvt
+
+super + alt + space
+	rofi -combi-modi window,drun,run -show combi -modi combi
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# WM Utils
+#
+
+super + alt + g
+  ~/scripts/wm/center.sh
+
+super + alt + Tab
+  ~/scripts/wm/focus.sh next
+
+super + alt + r
+  focus.sh underneath.sh
+
+super + alt + button1
+    xmmv $(pfw)
+
+
+super + alt + @button1
+    killall xmmv
+
+#
+# Custom shit
+#
+
+XF86AudioPlay
+  mpc toggle
+
+# Got to music workspace
+XF86Tools
+  bspc desktop -f mpd.local

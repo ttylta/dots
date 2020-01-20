@@ -1,0 +1,11 @@
+#! /bin/bash
+
+primm=$(pfm)
+mw=$(mattr w $primm)
+mh=$(mattr h $primm)
+
+geometry="100x10+$(($mw / 2))+$mh"
+
+echo $geometry
+
+urxvt -bg "rgba:0000/0000/0000/0000" -xrm "URxvt.internalBorder: 0" --geometry "600x5+-800+1000" --override-redirect +sb -e darkcava

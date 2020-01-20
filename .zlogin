@@ -1,0 +1,1 @@
+/home/tt/dots/.zprezto/runcoms/zlogin

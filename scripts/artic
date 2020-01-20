@@ -1,0 +1,39 @@
+#! /bin/bash
+
+while test $# -gt 0; do
+    case "$1" in
+	-a)
+	    shift
+	    article=$1
+	    shift
+	    ;;
+	-n) # TODO: Auto generate the name from the website title.
+	    shift
+	    name=$1
+	    shift
+	    ;;
+	*)
+	    echo "$1 is not a recognized argument"
+	    exit;
+	    ;;
+    esac
+done  
+
+if [ ! -z "$article" ] && [ ! -z "$name" ]
+then
+    echo ""
+    echo "Generating pdf article..."
+    echo ""
+
+    lynx -source "$article" > ~/tmp/articles/$name.html
+    prince ~/tmp/articles/$name.html
+    rm -f ~/tmp/articles/$name.html
+
+    echo ""
+    echo "If this fails, the website probably thinks you're a bot."
+    echo ""
+else
+    echo ""
+    echo "Name or article not provided."
+    echo ""
+fi

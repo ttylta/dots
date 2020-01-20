@@ -1,0 +1,12 @@
+*.log
+
+.config/mpv/watch_later/
+
+.config/nvim/plugged/
+.config/nvim/.netrwhist
+
+.config/mpd/database
+.config/mpd/log
+.config/mpd/pid
+.config/mpd/state
+

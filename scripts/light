@@ -1,0 +1,25 @@
+#!/bin/bash
+
+. "/home/tt/.cache/wal/colors.sh"
+
+echo -e '\033]11;'"$color1"'\007\033]10;'"$background"'\007'
+
+echo -e '\033]4;0;'"$color1"'\007'
+
+echo -e '\033]4;2;#f2bcb0\007'
+
+echo -e '\033]4;3;#dbc1ba\007'
+
+echo -e '\033]4;4;#fcdac7\007'
+
+echo -e '\033]4;8;#e5d2cc\007'
+
+echo -e '\033]4;10;#f2bcb0\007'
+
+echo -e '\033]4;11;#dbc1ba\007'
+
+echo -e '\033]4;12;#fcdac7\007'
+
+echo -e '\033]4;13;#ccadaf\007'
+
+echo -e '\033]708;'"$color1"'\007'

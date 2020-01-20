@@ -1,0 +1,31 @@
+#!/bin/bash
+
+fill=false
+center=false
+
+for arg in "$@"
+do
+  if [ "$arg" == "home" ] || [ "$arg" == "h" ]
+  then
+    echo "Initializing home config..."
+    /bin/bash /home/tt/.layouts/home.sh 
+  elif [ "$arg" == "--center" ] || [ "$arg" == "-c" ]
+  then
+    center=true
+  elif [ "$arg" == "--fill" ] || [ "$arg" == "-f" ]
+  then
+    fill=true
+  fi
+done
+
+if [ "$center" = true ]
+then
+  wllppr center &
+elif [ "$fill" = true ]
+then
+  wllppr &
+fi
+
+wal -R -n &>/dev/null
+exec polylaunch &>/dev/null
+

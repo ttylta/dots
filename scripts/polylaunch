@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+  polybar --reload left &
+  polybar --reload batt &
+  polybar --reload music &
+  MONITOR=$m polybar --reload workspaces &
+done

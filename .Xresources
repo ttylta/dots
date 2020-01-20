@@ -1,0 +1,6 @@
+URxvt.font:xft:Misc Tamsyn:bold:size=12:antialias=false
+URxvt.scrollBar: false
+URxvt.internalBorder:  30
+URxvt.loginShell: true
+Xcursor.size:  28
+
